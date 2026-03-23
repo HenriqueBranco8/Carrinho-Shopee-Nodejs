@@ -9,8 +9,9 @@ const additem = async (userCart, item) => {
 }
 
 //Deleter um item (Isso vai deletar o item indepedente da quantide, vai excluir tudo)
-const deleteItem = async (userCart, nameItem) => {
-
+const deleteItem = async (userCart) => {
+    const del = userCart.splice(0, -1)
+    console.log(del)
 }
 
 //Diminuir um item(Vai apenas diminuir a quantide do item que está no carrinho)
@@ -24,7 +25,7 @@ const increaseItem = async (userCart, nameItem) => {
 }
 
 const caculatorTotal = async (userCart) => {
-    const result = userCart.reduce((total, item)=> total + item.subtotal(), 0)
+    const result = userCart.reduce((total, item) => total + item.subtotal(), 0)
     console.log(result)
 }
 //Mostrar valor fixo do item
