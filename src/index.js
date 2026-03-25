@@ -8,7 +8,7 @@ const myCart = []
 const myWhishList = []
 
 const item1 = await createItem('Book', 19.99, 1)
-const item2 = await createItem('smartphone', 899.99, 2)
+const item2 = await createItem('smartphone', 899.99, 3)
 const item3 = await createItem('SSD 1TB', 280, 1 )
 const item4 = await createItem('Porco', 800, 13 )
 
@@ -19,9 +19,14 @@ await cartService.additem(myCart, item2)
 await cartService.additem(myWhishList, item3)
 await cartService.additem(myWhishList, item4)
 
-console.log('total your card is: ')
+await cartService.reduceItem(myCart, item2)
+//View your card
+await cartService.displaycart(myCart)
+
+
 await cartService.caculatorTotal(myCart)
 
+//Function what delete item of cart
+//await cartService.deleteItem(myCart, 'smartphone')
 
-await cartService.deleteItem(myWhishList)
-//await console.log(item2.quantity)
+
