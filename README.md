@@ -8,3 +8,5 @@ Criar umn carrinho de compras beados no carrinho de compras da shopee, aonde o c
 //Entidades representadas:
 //Carrinho 
 //Itens
+
+**ATIVIDADE FEITA EM CURSO**
